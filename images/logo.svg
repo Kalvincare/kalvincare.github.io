@@ -1,0 +1,11 @@
+<svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <circle cx="22" cy="20" r="10" fill="#43b97f"/>
+    <ellipse cx="15" cy="15" rx="2.5" ry="4" fill="#43b97f"/>
+    <ellipse cx="29" cy="15" rx="2.5" ry="4" fill="#43b97f"/>
+    <ellipse cx="15" cy="25" rx="2.5" ry="4" fill="#43b97f"/>
+    <ellipse cx="29" cy="25" rx="2.5" ry="4" fill="#43b97f"/>
+    <ellipse cx="22" cy="10" rx="2.5" ry="4" fill="#43b97f"/>
+    <text x="42" y="27" font-family="'Montserrat', Arial, sans-serif" font-size="22" fill="#222" font-weight="bold">KalvinCare</text>
+  </g>
+</svg> 

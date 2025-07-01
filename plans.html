@@ -30,6 +30,70 @@
   </script>
 </head>
 <body>
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="index.html" class="navbar-logo"><img src="images/logo.svg" alt="KalvinCare Logo" height="36"></a>
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="plans.html">Plans</a></li>
+        <li><a href="#founder">About</a></li>
+        <li><a href="mailto:support@kalvincare.com">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <style>
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      z-index: 1000;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 12px rgba(67,185,127,0.06);
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .navbar-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.3rem 1.5rem;
+    }
+    .navbar-logo img {
+      height: 36px;
+      vertical-align: middle;
+    }
+    .navbar-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar-links li {
+      display: inline-block;
+    }
+    .navbar-links a {
+      color: #222;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.08rem;
+      padding: 0.5rem 0.8rem;
+      border-radius: 1.5rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    .navbar-links a:hover, .navbar-links a:focus {
+      background: #e6f9f1;
+      color: #43b97f;
+    }
+    @media (max-width: 700px) {
+      .navbar-content { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+      .navbar-links { gap: 1rem; }
+    }
+  </style>
+  <div style="height:64px;"></div>
   <div class="container">
     <header class="plans-hero">
       <img src="images/hero-india.jpg" onerror="this.onerror=null;this.src='images/hero.jpg';" class="plans-hero-img" alt="Dog enjoying KalvinCare food in India">
