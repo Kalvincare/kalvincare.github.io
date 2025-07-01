@@ -1,15 +1,18 @@
 :root {
-  --primary: #2ec4b6;
+  --primary: #0071e3;
   --accent: #ff6f61;
-  --bg: #f9fafc;
+  --bg: #f8f9fa;
   --text: #222;
-  --cta: #ff6f61;
-  --cta-hover: #ff9478;
+  --cta: #0071e3;
+  --cta-hover: #005bb5;
   --card: #fff;
-  --shadow: 0 4px 24px rgba(46,196,182,0.10);
+  --shadow: 0 4px 24px rgba(0,0,0,0.06);
   --jolly-pink: #ffb6c1;
   --jolly-blue: #aee9ff;
   --jolly-yellow: #ffd166;
+  --border: #e5e7eb;
+  --badge: #eaf4fb;
+  --badge-text: #0071e3;
 }
 * { box-sizing: border-box; }
 html {
@@ -18,7 +21,7 @@ html {
 body {
   margin: 0;
   font-family: 'Montserrat', Arial, sans-serif;
-  background: linear-gradient(135deg, var(--bg) 60%, var(--jolly-blue) 100%);
+  background: var(--bg);
   color: var(--text);
   line-height: 1.7;
 }
@@ -36,21 +39,42 @@ header, section, footer {
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
-  background: linear-gradient(120deg, var(--jolly-yellow) 60%, var(--accent) 100%);
+  background: var(--bg);
   border-radius: 0 0 3rem 3rem;
-  box-shadow: var(--shadow);
+  box-shadow: none;
   padding: 0;
 }
-.hero-bg-media {
+.hero-bg-media-wrapper {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  object-fit: cover;
   z-index: 1;
+  overflow: hidden;
+  border-radius: 0 0 3rem 3rem;
+}
+.hero-bg-media {
+  width: 100vw;
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  background: #fff;
+}
+.hero-bg-media-fallback {
+  width: 100vw;
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  background: #fff;
 }
 .hero-overlay {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(90deg, rgba(255,209,102,0.85) 0%, rgba(255,209,102,0.7) 30%, rgba(255,255,255,0.0) 70%);
+  background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.0) 70%);
   z-index: 2;
 }
 .hero-content {
@@ -66,24 +90,24 @@ header, section, footer {
   text-align: left;
   padding-left: 3vw;
   padding-right: 2vw;
+  background: none;
 }
 .hero .badge {
   margin-bottom: 1.5rem;
 }
 .hero h1, .hero p {
-  text-shadow: 0 2px 16px rgba(0,0,0,0.08), 0 1px 0 #fff;
+  text-shadow: none;
 }
 .hero h1 {
   font-size: 3.2rem;
   font-weight: 800;
   color: var(--primary);
   margin-bottom: 1.2rem;
-  text-shadow: 0 2px 8px #ffd166;
 }
 .hero p {
   font-size: 1.5rem;
-  color: #444;
-  background: rgba(255,255,255,0.7);
+  color: #333;
+  background: rgba(255,255,255,0.8);
   border-radius: 1.5rem;
   padding: 1rem 1.5rem;
   margin-bottom: 2.5rem;
@@ -162,40 +186,38 @@ h1 {
   font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--primary);
-  text-shadow: 0 2px 8px #ffd166;
+  text-shadow: none;
 }
 .hero p {
   font-size: 1.5rem;
   margin-bottom: 2.5rem;
-  color: #444;
+  color: #333;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.8);
   border-radius: 1.5rem;
   padding: 1rem 1.5rem;
 }
 .cta {
   display: inline-block;
-  background: var(--cta);
+  background: var(--primary);
   color: #fff;
-  font-weight: 800;
+  font-weight: 700;
   padding: 1.3rem 2.7rem;
-  border-radius: 2.5rem;
+  border-radius: 2rem;
   text-decoration: none;
   margin: 0.5rem 0.5rem 0 0;
-  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  transition: background 0.2s, box-shadow 0.2s;
   font-size: 1.3rem;
-  box-shadow: 0 4px 16px rgba(255,184,107,0.15);
+  box-shadow: 0 2px 8px rgba(0,113,227,0.08);
   border: none;
   letter-spacing: 0.01em;
   position: relative;
 }
 .cta:focus, .cta:hover {
   background: var(--cta-hover);
-  outline: none;
-  box-shadow: 0 8px 32px rgba(255,184,107,0.18);
-  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(0,113,227,0.12);
 }
 .cta::after {
   content: ' 🐾';
@@ -215,8 +237,8 @@ h1 {
   background: rgba(46,196,182,0.08);
 }
 .secondary-link:focus, .secondary-link:hover {
-  background: var(--jolly-blue);
-  color: var(--accent);
+  background: var(--badge);
+  color: var(--primary);
 }
 h2 {
   font-size: 2.2rem;
@@ -243,6 +265,7 @@ h2 {
   text-align: center;
   transition: box-shadow 0.2s, transform 0.2s;
   max-width: 260px;
+  border: 1.5px solid var(--border);
 }
 .why-card:focus-within, .why-card:hover {
   box-shadow: 0 8px 32px rgba(67,185,127,0.10);
@@ -276,6 +299,7 @@ h2 {
   box-shadow: var(--shadow);
   transition: box-shadow 0.2s, transform 0.2s;
   max-width: 260px;
+  border: 1.5px solid var(--border);
 }
 .step:focus-within, .step:hover {
   box-shadow: 0 8px 32px rgba(67,185,127,0.10);
@@ -305,6 +329,7 @@ h2 {
   position: relative;
   transition: box-shadow 0.2s, transform 0.2s;
   max-width: 260px;
+  border: 1.5px solid var(--border);
 }
 .plan:focus-within, .plan:hover {
   box-shadow: 0 8px 32px rgba(67,185,127,0.10);
@@ -333,6 +358,25 @@ h2 {
   display: block;
   margin-bottom: 0.5rem;
 }
+.plan-badge {
+  position: absolute;
+  top: -1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--badge);
+  color: var(--badge-text);
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.45rem 1.4rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 8px rgba(0,113,227,0.07);
+  letter-spacing: 0.01em;
+  border: 1.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 2;
+}
 .testimonials {
   display: flex;
   flex-wrap: wrap;
@@ -350,6 +394,7 @@ h2 {
   text-align: center;
   transition: box-shadow 0.2s, transform 0.2s;
   max-width: 260px;
+  border: 1.5px solid var(--border);
 }
 .testimonial:focus-within, .testimonial:hover {
   box-shadow: 0 8px 32px rgba(67,185,127,0.10);
@@ -416,8 +461,8 @@ footer {
   transition: background 0.2s;
 }
 .footer-links a:focus, .footer-links a:hover {
-  background: var(--accent);
-  color: #fff;
+  background: var(--badge);
+  color: var(--primary);
 }
 .footer-social {
   margin: 1.2rem 0;
@@ -540,7 +585,7 @@ footer {
 .hero-video-bg {
   background: #fff;
   border-radius: 2.5rem;
-  box-shadow: 0 8px 32px rgba(46,196,182,0.10);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.04);
   padding: 0.5rem;
   max-width: 700px;
   margin: 0 0 2.5rem 0;
@@ -549,15 +594,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.hero-bg-media {
-  border-radius: 2rem;
-  width: 100%;
-  height: auto;
-  max-width: 680px;
-  max-height: 340px;
-  object-fit: contain;
-  background: #fff;
 }
 @media (max-width: 900px) {
   .hero-video-bg {

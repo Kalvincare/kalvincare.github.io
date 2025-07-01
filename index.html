@@ -108,10 +108,10 @@
   </style>
   <div style="height:64px;"></div>
   <header class="hero" aria-label="KalvinCare Hero Section">
-    <div class="hero-video-bg">
+    <div class="hero-bg-media-wrapper">
       <video class="hero-bg-media" autoplay loop muted playsinline poster="images/hero.jpg">
         <source src="images/hero.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+        <img src="images/hero.jpg" alt="Happy dog enjoying KalvinCare" class="hero-bg-media-fallback" />
       </video>
     </div>
     <div class="hero-overlay"></div>
@@ -184,7 +184,8 @@
           <strong>Starter Plan</strong>
           <p>₹999/month – Fresh basics for small breeds.</p>
         </div>
-        <div class="plan" tabindex="0">
+        <div class="plan" tabindex="0" style="border:2px solid var(--primary);">
+          <div class="plan-badge">★ Most Popular</div>
           <img src="images/icon-dog-bowl.png" alt="Premium Plan: Medium dog + supplement bottle" loading="lazy" style="max-width:100%;height:auto;">
           <strong>Premium Plan</strong>
           <p>₹1,499/month – Customized meals + longevity supplements.</p>
@@ -195,8 +196,8 @@
           <p>₹2,499/month – Multi-pet or large breed option.</p>
         </div>
         <div class="plan" id="trial" tabindex="0">
-          <span class="ribbon">Try Me</span>
-          <img src="images/icon-dog-bowl.png" alt="Trial Pack: Mini pack with a Try Me ribbon" loading="lazy" style="max-width:100%;height:auto;">
+          <div class="plan-badge">Try Me</div>
+          <img src="images/icon-dog-bowl.png" alt="Trial Pack: Mini pack with a Try Me badge" loading="lazy" style="max-width:100%;height:auto;">
           <strong>Trial Pack</strong>
           <p>₹199 – Try 3 days, see the magic!</p>
         </div>
