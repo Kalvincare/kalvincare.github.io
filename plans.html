@@ -7,27 +7,6 @@
   <meta name="description" content="Compare KalvinCare's fresh pet food and supplement plans. Choose the best subscription for your pet's health and happiness.">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="plans.css">
-  <script>
-    // FAQ accordion with ARIA and keyboard support
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('.faq-question').forEach(function(btn) {
-        btn.setAttribute('aria-expanded', 'false');
-        btn.setAttribute('aria-controls', btn.nextElementSibling.id || '');
-        btn.addEventListener('click', function() {
-          const item = btn.closest('.faq-item');
-          const expanded = item.classList.toggle('open');
-          btn.setAttribute('aria-expanded', expanded);
-        });
-        btn.addEventListener('keydown', function(e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            btn.click();
-          }
-        });
-      });
-    });
-  </script>
 </head>
 <body>
   <nav class="navbar">
@@ -35,205 +14,210 @@
       <a href="index.html" class="navbar-logo"><img src="images/logo.svg" alt="KalvinCare Logo" height="36"></a>
       <ul class="navbar-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="plans.html">Plans</a></li>
-        <li><a href="#founder">About</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="mailto:support@kalvincare.com">Contact</a></li>
       </ul>
     </div>
   </nav>
-  <style>
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      z-index: 1000;
-      background: rgba(255,255,255,0.7);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 2px 12px rgba(67,185,127,0.06);
-      border-bottom: 1px solid #e0e0e0;
-    }
-    .navbar-content {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.3rem 1.5rem;
-    }
-    .navbar-logo img {
-      height: 36px;
-      vertical-align: middle;
-    }
-    .navbar-links {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-      margin: 0;
-      padding: 0;
-    }
-    .navbar-links li {
-      display: inline-block;
-    }
-    .navbar-links a {
-      color: #222;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.08rem;
-      padding: 0.5rem 0.8rem;
-      border-radius: 1.5rem;
-      transition: background 0.2s, color 0.2s;
-    }
-    .navbar-links a:hover, .navbar-links a:focus {
-      background: #e6f9f1;
-      color: #43b97f;
-    }
-    @media (max-width: 700px) {
-      .navbar-content { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-      .navbar-links { gap: 1rem; }
-    }
-  </style>
-  <div style="height:64px;"></div>
-  <div class="container">
-    <header class="plans-hero">
-      <img src="images/hero.jpg" class="plans-hero-img" alt="Happy dog enjoying KalvinCare">
-      <div class="plans-hero-content">
-        <h1>Choose the Perfect Plan for Your Pet</h1>
-        <p>Tailored meals, longevity supplements, and expert care — delivered fresh, monthly.</p>
+  <header class="hero" aria-label="Plans Hero Section">
+    <div class="hero-bg-media-wrapper">
+      <video class="hero-bg-media" autoplay loop muted playsinline poster="images/hero.jpg">
+        <source src="images/hero.mp4" type="video/mp4">
+        <img src="images/hero.jpg" alt="Happy dog enjoying KalvinCare" class="hero-bg-media-fallback" />
+      </video>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="badge" aria-label="Made in Bangalore">Made in Bangalore</div>
+      <h1>Choose the Perfect Plan for Your Pet</h1>
+      <p>Tailored meals, longevity supplements, and expert care — delivered fresh, monthly.</p>
+      <div class="hero-buttons">
         <a href="#trial" class="cta">Start 3-Day Trial – ₹199</a>
         <a href="#plan-comparison" class="secondary-link">Compare All Plans</a>
       </div>
-    </header>
-
-    <main>
-      <section class="plan-comparison" id="plan-comparison">
-        <div class="plan-table">
-          <div class="plan-card">
-            <strong>Starter Plan</strong>
-            <div style="color:#888;font-size:0.98rem;margin-bottom:0.7rem;">Small breed / new users</div>
-            <ul>
-              <li><span class="icon">✅</span> Fresh, Customized Meals</li>
-              <li><span class="icon">❌</span> Longevity Supplements</li>
-              <li><span class="icon">✅</span> Personalized Nutrition Quiz</li>
-              <li><span class="icon">Monthly</span> Delivery Frequency</li>
-              <li><span class="icon">❌</span> Access to Vet & Nutritionist</li>
-              <li><span class="icon">✅</span> Cancel Anytime</li>
-              <li><span class="icon">✅</span> Free Delivery in Bangalore</li>
-            </ul>
-            <div style="font-size:1.1rem;font-weight:700;margin-bottom:0.7rem;">₹999/mo</div>
-            <a href="#" class="cta">Select Plan</a>
-          </div>
-          <div class="plan-card" style="border:2px solid var(--primary,#43b97f);">
-            <div class="plan-badge">★ Most Popular</div>
-            <strong>Premium Plan</strong>
-            <div style="color:#888;font-size:0.98rem;margin-bottom:0.7rem;">Most pets (active/lifestyle)</div>
-            <ul>
-              <li><span class="icon">✅</span> Fresh, Customized Meals</li>
-              <li><span class="icon">✅</span> Longevity Supplements</li>
-              <li><span class="icon">✅</span> Personalized Nutrition Quiz</li>
-              <li><span class="icon">Bi-weekly</span> Delivery Frequency</li>
-              <li><span class="icon">✅</span> Access to Vet & Nutritionist</li>
-              <li><span class="icon">✅</span> Cancel Anytime</li>
-              <li><span class="icon">✅</span> Free Delivery in Bangalore</li>
-            </ul>
-            <div style="font-size:1.1rem;font-weight:700;margin-bottom:0.7rem;">₹1,499/mo</div>
-            <a href="#" class="cta">Select Plan</a>
-          </div>
-          <div class="plan-card">
-            <strong>Family Plan</strong>
-            <div style="color:#888;font-size:0.98rem;margin-bottom:0.7rem;">Multi-pet / large breeds</div>
-            <ul>
-              <li><span class="icon">✅</span> Fresh, Customized Meals</li>
-              <li><span class="icon">✅</span> Longevity Supplements</li>
-              <li><span class="icon">✅</span> Personalized Nutrition Quiz</li>
-              <li><span class="icon">Bi-weekly</span> Delivery Frequency</li>
-              <li><span class="icon">✅</span> Access to Vet & Nutritionist</li>
-              <li><span class="icon">✅</span> Cancel Anytime</li>
-              <li><span class="icon">✅</span> Free Delivery in Bangalore</li>
-            </ul>
-            <div style="font-size:1.1rem;font-weight:700;margin-bottom:0.7rem;">₹2,499/mo</div>
-            <a href="#" class="cta">Select Plan</a>
-          </div>
+    </div>
+  </header>
+  <main>
+    <section id="plan-comparison" class="section">
+      <h2>Compare Our Plans</h2>
+      <div class="plan-table">
+        <div class="plan-card">
+          <strong>Starter Plan</strong>
+          <div class="plan-desc">Small breed / new users</div>
+          <ul>
+            <li>✅ Fresh, Customized Meals</li>
+            <li>❌ Longevity Supplements</li>
+            <li>✅ Personalized Nutrition Quiz</li>
+            <li>Monthly Delivery</li>
+            <li>❌ Access to Vet & Nutritionist</li>
+            <li>✅ Cancel Anytime</li>
+            <li>✅ Free Delivery in Bangalore</li>
+          </ul>
+          <div class="plan-price">₹999/mo</div>
+          <a href="#" class="cta">Select Plan</a>
         </div>
-      </section>
-
-      <section class="trial-banner" id="trial">
+        <div class="plan-card popular">
+          <div class="plan-badge">★ Most Popular</div>
+          <strong>Premium Plan</strong>
+          <div class="plan-desc">Most pets (active/lifestyle)</div>
+          <ul>
+            <li>✅ Fresh, Customized Meals</li>
+            <li>✅ Longevity Supplements</li>
+            <li>✅ Personalized Nutrition Quiz</li>
+            <li>Bi-weekly Delivery</li>
+            <li>✅ Access to Vet & Nutritionist</li>
+            <li>✅ Cancel Anytime</li>
+            <li>✅ Free Delivery in Bangalore</li>
+          </ul>
+          <div class="plan-price">₹1,499/mo</div>
+          <a href="#" class="cta">Select Plan</a>
+        </div>
+        <div class="plan-card">
+          <strong>Family Plan</strong>
+          <div class="plan-desc">Multi-pet / large breeds</div>
+          <ul>
+            <li>✅ Fresh, Customized Meals</li>
+            <li>✅ Longevity Supplements</li>
+            <li>✅ Personalized Nutrition Quiz</li>
+            <li>Bi-weekly Delivery</li>
+            <li>✅ Access to Vet & Nutritionist</li>
+            <li>✅ Cancel Anytime</li>
+            <li>✅ Free Delivery in Bangalore</li>
+          </ul>
+          <div class="plan-price">₹2,499/mo</div>
+          <a href="#" class="cta">Select Plan</a>
+        </div>
+      </div>
+      <div class="trial-banner" id="trial">
         <div class="trial-visual">🐾</div>
-        <div style="flex:1;">
-          <div style="font-size:1.15rem;font-weight:600;margin-bottom:0.5rem;">Not sure which plan suits your pet?</div>
-          <div style="color:#666;margin-bottom:0.7rem;">Try our 3-day Fresh Meal Plan for just ₹199.</div>
+        <div>
+          <div class="trial-head">Not sure which plan suits your pet?</div>
+          <div class="trial-desc">Try our 3-day Fresh Meal Plan for just ₹199.</div>
         </div>
         <a href="#" class="cta">Start Trial Now</a>
-      </section>
-
-      <section class="how-works">
-        <h2>How Kalvincare Works</h2>
-        <div class="how-steps">
-          <div class="how-step">
-            <div class="icon">1️⃣</div>
-            <strong>Tell Us About Your Pet</strong>
-            <div>Take a 2-min quiz</div>
-          </div>
-          <div class="how-step">
-            <div class="icon">2️⃣</div>
-            <strong>Get Your Plan & Delivery</strong>
-            <div>Meals and supplements at your doorstep</div>
-          </div>
-          <div class="how-step">
-            <div class="icon">3️⃣</div>
-            <strong>See the Difference</strong>
-            <div>Track pet health and behavior improvement</div>
-          </div>
+      </div>
+    </section>
+    <section id="how" class="section">
+      <h2>How Kalvincare Works</h2>
+      <div class="steps">
+        <div class="step">
+          <img src="images/icon-quiz.png" alt="Step 1: Quiz">
+          <strong>Tell Us About Your Pet</strong>
+          <p>Take our 1-minute quiz—share their breed, age, and needs.</p>
         </div>
-      </section>
-
-      <section class="testimonials-grid">
+        <div class="step">
+          <img src="images/icon-chef-hat.png" alt="Step 2: Meal Prep">
+          <strong>We Craft Their Meal</strong>
+          <p>Our team designs a fresh, tailored plan, delivered to your door.</p>
+        </div>
+        <div class="step">
+          <img src="images/icon-dog-bowl.png" alt="Step 3: Enjoy">
+          <strong>See the Difference</strong>
+          <p>Watch your pet thrive with every bowl—starting in just days!</p>
+        </div>
+      </div>
+    </section>
+    <section id="testimonials" class="section">
+      <h2>What Bangalore Pet Parents Say</h2>
+      <div class="testimonials-grid">
         <div class="testimonial-card">
-          <img src="images/testimonial-indian1.jpg" onerror="this.onerror=null;this.src='images/testimonial-indian2.jpg';" alt="Ankita & Bruno, Labrador" style="max-width:100%;height:auto;">
+          <img src="images/testimonial-indian1.jpg" alt="Ankita & Bruno, Labrador">
           <div class="pet-name">Ankita & Bruno, Labrador</div>
-          <div style="font-size:1.05rem;font-style:italic;">"Bruno's coat is so shiny and he's full of energy!"</div>
+          <div class="testimonial-quote">"Bruno's coat is so shiny and he's full of energy!"</div>
         </div>
         <div class="testimonial-card">
-          <img src="images/testimonial-indian2.jpg" alt="Rohan & Simba, Indie Cat" style="max-width:100%;height:auto;">
+          <img src="images/testimonial-indian2.jpg" alt="Rohan & Simba, Indie Cat">
           <div class="pet-name">Rohan & Simba, Indie Cat</div>
-          <div style="font-size:1.05rem;font-style:italic;">"Simba loves the meals and I love the science!"</div>
+          <div class="testimonial-quote">"Simba loves the meals and I love the science!"</div>
         </div>
         <div class="testimonial-card">
-          <img src="images/testimonial-indian3.jpg" alt="Dr. Kavita & Max, Golden Retriever" style="max-width:100%;height:auto;">
+          <img src="images/testimonial-indian3.jpg" alt="Dr. Kavita & Max, Golden Retriever">
           <div class="pet-name">Dr. Kavita & Max, Golden Retriever</div>
-          <div style="font-size:1.05rem;font-style:italic;">"My clients see real results with KalvinCare."</div>
+          <div class="testimonial-quote">"My clients see real results with KalvinCare."</div>
         </div>
-      </section>
-
-      <section class="faq-section">
-        <h2>FAQs</h2>
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question">Can I cancel or change my plan anytime?</button>
-            <div class="faq-answer">Yes! You can cancel or change your plan at any time from your account dashboard or by contacting support.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">Are the supplements vet-approved?</button>
-            <div class="faq-answer">Absolutely. All supplements are formulated and reviewed by certified vets and biologists.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">Do you deliver outside Bangalore?</button>
-            <div class="faq-answer">Currently, we deliver only within Bangalore to ensure maximum freshness.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">What's in the meals?</button>
-            <div class="faq-answer">Our meals contain fresh, locally sourced meats, organic veggies, superfoods, and essential supplements. No fillers or preservatives.</div>
-          </div>
+        <div class="testimonial-card">
+          <img src="images/testimonial-priya.jpg" alt="Priya, Koramangala">
+          <div class="pet-name">Priya, Koramangala</div>
+          <div class="testimonial-quote">"My Labrador's coat is shinier than ever after 2 weeks!"</div>
         </div>
-      </section>
-
-      <section class="final-cta">
-        <h2>Let's build a healthier life for your pet.</h2>
-        <a href="#plan-comparison" class="cta">Choose a Plan</a>
-        <a href="#trial" class="secondary-link">Try 3-Day Trial – ₹199</a>
-      </section>
-      <div class="sticky-cta"><a href="#plan-comparison">Choose a Plan</a></div>
-    </main>
-  </div>
+        <div class="testimonial-card">
+          <img src="images/testimonial-ravi.jpg" alt="Ravi, Whitefield">
+          <div class="pet-name">Ravi, Whitefield</div>
+          <div class="testimonial-quote">"Finally, food my cat loves—and I trust it's healthy."</div>
+        </div>
+        <div class="testimonial-card">
+          <img src="images/testimonial-kavita.jpg" alt="Dr. Kavita, Vet Partner">
+          <div class="pet-name">Dr. Kavita, Vet Partner</div>
+          <div class="testimonial-quote">"Kalvin Care's science is spot-on—my clients see results."</div>
+        </div>
+      </div>
+    </section>
+    <section id="faq" class="section faq-section">
+      <h2>FAQs</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">Can I cancel or change my plan anytime?</button>
+          <div class="faq-answer">Yes! You can cancel or change your plan at any time from your account dashboard or by contacting support.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Are the supplements vet-approved?</button>
+          <div class="faq-answer">Absolutely. All supplements are formulated and reviewed by certified vets and biologists.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do you deliver outside Bangalore?</button>
+          <div class="faq-answer">Currently, we deliver only within Bangalore to ensure maximum freshness.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What's in the meals?</button>
+          <div class="faq-answer">Our meals contain fresh, locally sourced meats, organic veggies, superfoods, and essential supplements. No fillers or preservatives.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.svg" alt="KalvinCare Logo" height="36">
+        <span>Made in Bangalore | 100% Fresh Guarantee</span>
+      </div>
+      <nav class="footer-links">
+        <a href="index.html">Home</a> |
+        <a href="#plans">Plans</a> |
+        <a href="#how">How It Works</a> |
+        <a href="#faq">FAQ</a> |
+        <a href="mailto:support@kalvincare.com">Contact</a>
+      </nav>
+      <div class="footer-contact">
+        support@kalvincare.com | +91-XXXX-XXXX
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><img src="images/icon-instagram.png" alt="Instagram"></a>
+        <a href="#" aria-label="Facebook"><img src="images/icon-facebook.png" alt="Facebook"></a>
+        <a href="#" aria-label="WhatsApp"><img src="images/icon-whatsapp.png" alt="WhatsApp"></a>
+      </div>
+    </div>
+    <div class="footer-cta">Join the Pet Wellness Revolution—Start Today!</div>
+    <div class="footer-copy">&copy; 2024 KalvinCare Biosciences</div>
+  </footer>
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-controls', btn.nextElementSibling.id || '');
+      btn.addEventListener('click', function() {
+        const item = btn.closest('.faq-item');
+        const expanded = item.classList.toggle('open');
+        btn.setAttribute('aria-expanded', expanded);
+      });
+      btn.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          btn.click();
+        }
+      });
+    });
+  </script>
 </body>
 </html> 

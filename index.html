@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KalvinCare Biosciences | Fresh Food, Longer Lives</title>
+  <title>KalvinCare | Fresh Food, Longer Lives</title>
   <meta name="description" content="Fresh, science-backed pet food and longevity supplements from Bangalore. Give your pet the nutrition they deserve with KalvinCare.">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,9 +13,11 @@
     <div class="navbar-content">
       <a href="index.html" class="navbar-logo"><img src="images/logo.svg" alt="KalvinCare Logo" height="36"></a>
       <ul class="navbar-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="plans.html">Plans</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#how">How It Works</a></li>
         <li><a href="#founder">About</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="mailto:support@kalvincare.com">Contact</a></li>
       </ul>
     </div>
@@ -128,138 +130,227 @@
   <div class="animated-divider"></div>
 
   <main>
-    <section id="why" aria-labelledby="why-header" class="section">
-      <h2 id="why-header">Why Doggo Parents Choose Kalvin Care</h2>
+    <section id="why" class="section">
+      <h2>Why Pet Parents Choose Kalvin Care</h2>
       <div class="why-grid">
-        <div class="why-card" tabindex="0">
-          <img src="images/icon-ingredients.png" alt="Fresh Ingredients: Lean meats, organic veggies, superfoods" loading="lazy" style="max-width:100%;height:auto;">
+        <div class="why-card">
+          <img src="images/icon-ingredients.png" alt="Fresh Ingredients">
           <strong>Fresh, Not Processed</strong>
           <p>No preservatives or fillers—just lean meats, organic veggies, and superfoods, sourced locally in Bangalore.</p>
         </div>
-        <div class="why-card" tabindex="0">
-          <img src="images/icon-microscope.png" alt="Science-Backed: Lab and research" loading="lazy" style="max-width:100%;height:auto;">
+        <div class="why-card">
+          <img src="images/icon-microscope.png" alt="Science-Backed Longevity">
           <strong>Science-Backed Longevity</strong>
           <p>Formulated by Abhishek Anand, with probiotics and omega-3s to boost immunity and lifespan.</p>
         </div>
-        <div class="why-card" tabindex="0">
-          <img src="images/icon-settings.png" alt="Customization: Dropdown menu" loading="lazy" style="max-width:100%;height:auto;">
+        <div class="why-card">
+          <img src="images/icon-settings.png" alt="Customized for Your Pet">
           <strong>Customized for Your Pet</strong>
           <p>Tailored recipes for every breed, age, and need—because every pet is unique.</p>
         </div>
-        <div class="why-card" tabindex="0">
-          <img src="images/icon-dog.png" alt="Visible Results: Before/after pet photo" loading="lazy" style="max-width:100%;height:auto;">
+        <div class="why-card">
+          <img src="images/icon-dog.png" alt="Visible Results">
           <strong>Visible Results</strong>
           <p>Our Bangalore pilot showed happier, healthier pets in just 30 days.</p>
         </div>
       </div>
     </section>
 
-    <section id="how" aria-labelledby="how-header" class="section">
-      <h2 id="how-header">Healthier Pets in 3 Easy Steps</h2>
+    <section id="how" class="section">
+      <h2>Healthier Pets in 3 Easy Steps</h2>
       <div class="steps">
-        <div class="step" tabindex="0">
-          <img src="images/icon-quiz.png" alt="Step 1: Pet parent filling out quiz on a phone" loading="lazy" style="max-width:100%;height:auto;">
+        <div class="step">
+          <img src="images/icon-quiz.png" alt="Step 1: Quiz">
           <strong>Tell Us About Your Pet</strong>
           <p>Take our 1-minute quiz—share their breed, age, and needs.</p>
         </div>
-        <div class="step" tabindex="0">
-          <img src="images/icon-chef-hat.png" alt="Step 2: Kitchen scene with chefs packing Kalvin Care meals" loading="lazy" style="max-width:100%;height:auto;">
+        <div class="step">
+          <img src="images/icon-chef-hat.png" alt="Step 2: Meal Prep">
           <strong>We Craft Their Meal</strong>
           <p>Our team designs a fresh, tailored plan, delivered to your door.</p>
         </div>
-        <div class="step" tabindex="0">
-          <img src="images/icon-dog-bowl.png" alt="Step 3: A wagging dog/cat enjoying their food" loading="lazy" style="max-width:100%;height:auto;">
+        <div class="step">
+          <img src="images/icon-dog-bowl.png" alt="Step 3: Enjoy">
           <strong>See the Difference</strong>
           <p>Watch your pet thrive with every bowl—starting in just days!</p>
         </div>
       </div>
-      <a href="#plans" class="cta" aria-label="Build Your Pet's Plan">Build Your Pet's Plan</a>
+      <a href="#plans" class="cta">Build Your Pet's Plan</a>
     </section>
 
-    <section id="plans" aria-labelledby="plans-header" class="section">
-      <h2 id="plans-header">Plans for Every Pet, Delivered Fresh</h2>
-      <div class="pricing-table">
-        <div class="plan" tabindex="0">
-          <img src="images/icon-dog-bowl.png" alt="Starter Plan: Small dog silhouette + bowl" loading="lazy" style="max-width:100%;height:auto;">
+    <section id="plans" class="section">
+      <h2>Plans for Every Pet, Delivered Fresh</h2>
+      <div class="plan-table">
+        <div class="plan-card">
           <strong>Starter Plan</strong>
-          <p>₹999/month – Fresh basics for small breeds.</p>
+          <div class="plan-desc">Small breed / new users</div>
+          <ul>
+            <li>✅ Fresh, Customized Meals</li>
+            <li>❌ Longevity Supplements</li>
+            <li>✅ Personalized Nutrition Quiz</li>
+            <li>Monthly Delivery</li>
+            <li>❌ Access to Vet & Nutritionist</li>
+            <li>✅ Cancel Anytime</li>
+            <li>✅ Free Delivery in Bangalore</li>
+          </ul>
+          <div class="plan-price">₹999/mo</div>
+          <a href="#" class="cta">Select Plan</a>
         </div>
-        <div class="plan" tabindex="0" style="border:2px solid var(--primary);">
+        <div class="plan-card popular">
           <div class="plan-badge">★ Most Popular</div>
-          <img src="images/icon-dog-bowl.png" alt="Premium Plan: Medium dog + supplement bottle" loading="lazy" style="max-width:100%;height:auto;">
           <strong>Premium Plan</strong>
-          <p>₹1,499/month – Customized meals + longevity supplements.</p>
+          <div class="plan-desc">Most pets (active/lifestyle)</div>
+          <ul>
+            <li>✅ Fresh, Customized Meals</li>
+            <li>✅ Longevity Supplements</li>
+            <li>✅ Personalized Nutrition Quiz</li>
+            <li>Bi-weekly Delivery</li>
+            <li>✅ Access to Vet & Nutritionist</li>
+            <li>✅ Cancel Anytime</li>
+            <li>✅ Free Delivery in Bangalore</li>
+          </ul>
+          <div class="plan-price">₹1,499/mo</div>
+          <a href="#" class="cta">Select Plan</a>
         </div>
-        <div class="plan" tabindex="0">
-          <img src="images/icon-dog-bowl.png" alt="Family Plan: Two pets + larger bowl" loading="lazy" style="max-width:100%;height:auto;">
+        <div class="plan-card">
           <strong>Family Plan</strong>
-          <p>₹2,499/month – Multi-pet or large breed option.</p>
-        </div>
-        <div class="plan" id="trial" tabindex="0">
-          <div class="plan-badge">Try Me</div>
-          <img src="images/icon-dog-bowl.png" alt="Trial Pack: Mini pack with a Try Me badge" loading="lazy" style="max-width:100%;height:auto;">
-          <strong>Trial Pack</strong>
-          <p>₹199 – Try 3 days, see the magic!</p>
+          <div class="plan-desc">Multi-pet / large breeds</div>
+          <ul>
+            <li>✅ Fresh, Customized Meals</li>
+            <li>✅ Longevity Supplements</li>
+            <li>✅ Personalized Nutrition Quiz</li>
+            <li>Bi-weekly Delivery</li>
+            <li>✅ Access to Vet & Nutritionist</li>
+            <li>✅ Cancel Anytime</li>
+            <li>✅ Free Delivery in Bangalore</li>
+          </ul>
+          <div class="plan-price">₹2,499/mo</div>
+          <a href="#" class="cta">Select Plan</a>
         </div>
       </div>
-      <p style="margin-top:1.5rem;">Free delivery in Bangalore—cancel anytime.</p>
-      <a href="plans.html" class="cta" aria-label="Choose Your Plan">Choose Your Plan</a>
-      <a href="plans.html" class="secondary-link" aria-label="Compare All Plans">Compare All Plans</a>
-    </section>
-
-    <section id="testimonials" aria-labelledby="testimonials-header" class="section">
-      <h2 id="testimonials-header">What Bangalore Pet Parents Say</h2>
-      <div class="testimonials">
-        <div class="testimonial" tabindex="0">
-          <img src="images/testimonial-indian1.jpg" onerror="this.onerror=null;this.src='images/testimonial-indian2.jpg';" alt="Indian woman with Labrador" loading="lazy" style="max-width:100%;height:auto;">
-          <strong>Priya, Koramangala</strong>
-          <p>"My Labrador's coat is shinier than ever after 2 weeks!"</p>
+      <div class="trial-banner" id="trial">
+        <div class="trial-visual">🐾</div>
+        <div>
+          <div class="trial-head">Not sure which plan suits your pet?</div>
+          <div class="trial-desc">Try our 3-day Fresh Meal Plan for just ₹199.</div>
         </div>
-        <div class="testimonial" tabindex="0">
-          <img src="images/testimonial-indian2.jpg" alt="Indian man with cat" loading="lazy" style="max-width:100%;height:auto;">
-          <strong>Ravi, Whitefield</strong>
-          <p>"Finally, food my cat loves—and I trust it's healthy."</p>
-        </div>
-        <div class="testimonial" tabindex="0">
-          <img src="images/testimonial-indian3.jpg" alt="Indian vet with dog" loading="lazy" style="max-width:100%;height:auto;">
-          <strong>Dr. Kavita, Vet Partner</strong>
-          <p>"Kalvin Care's science is spot-on—my clients see results."</p>
-        </div>
+        <a href="#" class="cta">Start Trial Now</a>
       </div>
     </section>
 
-    <section id="founder" aria-labelledby="founder-header" class="section">
-      <h2 id="founder-header">Meet Abhishek—Your Pet's Nutrition Expert</h2>
-      <div class="founder">
-        <div class="founder-img">
-          <img src="images/founder-abhishek.jpg" alt="Abhishek Anand, biologist, with pet and Kalvin Care pack" loading="lazy" style="max-width:100%;height:auto;">
+    <section id="testimonials" class="section">
+      <h2>What Bangalore Pet Parents Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <img src="images/testimonial-indian1.jpg" alt="Ankita & Bruno, Labrador">
+          <div class="pet-name">Ankita & Bruno, Labrador</div>
+          <div class="testimonial-quote">"Bruno's coat is so shiny and he's full of energy!"</div>
         </div>
+        <div class="testimonial-card">
+          <img src="images/testimonial-indian2.jpg" alt="Rohan & Simba, Indie Cat">
+          <div class="pet-name">Rohan & Simba, Indie Cat</div>
+          <div class="testimonial-quote">"Simba loves the meals and I love the science!"</div>
+        </div>
+        <div class="testimonial-card">
+          <img src="images/testimonial-indian3.jpg" alt="Dr. Kavita & Max, Golden Retriever">
+          <div class="pet-name">Dr. Kavita & Max, Golden Retriever</div>
+          <div class="testimonial-quote">"My clients see real results with KalvinCare."</div>
+        </div>
+        <div class="testimonial-card">
+          <img src="images/testimonial-priya.jpg" alt="Priya, Koramangala">
+          <div class="pet-name">Priya, Koramangala</div>
+          <div class="testimonial-quote">"My Labrador's coat is shinier than ever after 2 weeks!"</div>
+        </div>
+        <div class="testimonial-card">
+          <img src="images/testimonial-ravi.jpg" alt="Ravi, Whitefield">
+          <div class="pet-name">Ravi, Whitefield</div>
+          <div class="testimonial-quote">"Finally, food my cat loves—and I trust it's healthy."</div>
+        </div>
+        <div class="testimonial-card">
+          <img src="images/testimonial-kavita.jpg" alt="Dr. Kavita, Vet Partner">
+          <div class="pet-name">Dr. Kavita, Vet Partner</div>
+          <div class="testimonial-quote">"Kalvin Care's science is spot-on—my clients see results."</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="founder" class="section founder-section">
+      <div class="founder-grid">
+        <img src="images/founder-abhishek.jpg" alt="Abhishek Anand, Founder" class="founder-img">
         <div class="founder-content">
-          <p>Hi, I'm <strong>Abhishek Anand</strong>, a biologist from Bangalore. After years researching animal health and founding Wochman—a global livestock startup—I created Kalvin Care to bring fresh, science-backed nutrition to India's pets. Let's give them the long, happy lives they deserve!</p>
-          <a href="#about" class="secondary-link" aria-label="Learn Our Story">Learn Our Story</a>
-          <div style="margin-top:1rem;"><span class="badge">Featured in YourStory</span></div>
+          <h2>Meet Abhishek—Your Pet's Nutrition Expert</h2>
+          <p>Hi, I'm Abhishek Anand, a biologist from Bangalore. After years researching animal health and founding Wochman—a global livestock startup—I created Kalvin Care to bring fresh, science-backed nutrition to India's pets. Let's give them the long, happy lives they deserve!</p>
+          <a href="#" class="secondary-link">Learn Our Story</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq-section">
+      <h2>FAQs</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">Can I cancel or change my plan anytime?</button>
+          <div class="faq-answer">Yes! You can cancel or change your plan at any time from your account dashboard or by contacting support.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Are the supplements vet-approved?</button>
+          <div class="faq-answer">Absolutely. All supplements are formulated and reviewed by certified vets and biologists.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do you deliver outside Bangalore?</button>
+          <div class="faq-answer">Currently, we deliver only within Bangalore to ensure maximum freshness.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What's in the meals?</button>
+          <div class="faq-answer">Our meals contain fresh, locally sourced meats, organic veggies, superfoods, and essential supplements. No fillers or preservatives.</div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer aria-label="KalvinCare Footer">
-    <div>Made in Bangalore | 100% Fresh Guarantee</div>
-    <nav class="footer-links" aria-label="Footer Navigation">
-      <a href="#" aria-label="Home">Home</a> |
-      <a href="#plans" aria-label="Plans">Plans</a> |
-      <a href="#founder" aria-label="About">About</a> |
-      <a href="#faq" aria-label="FAQ">FAQ</a> |
-      <a href="mailto:support@kalvincare.com" aria-label="Contact">Contact</a>
-    </nav>
-    <div>support@kalvincare.com | +91-XXXX-XXXX</div>
-    <div class="footer-social">
-      <a href="#" aria-label="Instagram"><img src="images/icon-instagram.png" alt="Instagram" style="max-width:100%;height:auto;"></a>
-      <a href="#" aria-label="Facebook"><img src="images/icon-facebook.png" alt="Facebook" style="max-width:100%;height:auto;"></a>
-      <a href="#" aria-label="WhatsApp"><img src="images/icon-whatsapp.png" alt="WhatsApp" style="max-width:100%;height:auto;"></a>
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.svg" alt="KalvinCare Logo" height="36">
+        <span>Made in Bangalore | 100% Fresh Guarantee</span>
+      </div>
+      <nav class="footer-links">
+        <a href="#">Home</a> |
+        <a href="#plans">Plans</a> |
+        <a href="#why">Why Us</a> |
+        <a href="#founder">About</a> |
+        <a href="#faq">FAQ</a> |
+        <a href="mailto:support@kalvincare.com">Contact</a>
+      </nav>
+      <div class="footer-contact">
+        support@kalvincare.com | +91-XXXX-XXXX
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><img src="images/icon-instagram.png" alt="Instagram"></a>
+        <a href="#" aria-label="Facebook"><img src="images/icon-facebook.png" alt="Facebook"></a>
+        <a href="#" aria-label="WhatsApp"><img src="images/icon-whatsapp.png" alt="WhatsApp"></a>
+      </div>
     </div>
-    <div style="margin-top:1rem;font-weight:700;">Join the Pet Wellness Revolution—Start Today!</div>
-    <div style="margin-top:1rem;font-size:0.9rem;">&copy; 2024 KalvinCare Biosciences</div>
+    <div class="footer-cta">Join the Pet Wellness Revolution—Start Today!</div>
+    <div class="footer-copy">&copy; 2024 KalvinCare Biosciences</div>
   </footer>
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-controls', btn.nextElementSibling.id || '');
+      btn.addEventListener('click', function() {
+        const item = btn.closest('.faq-item');
+        const expanded = item.classList.toggle('open');
+        btn.setAttribute('aria-expanded', expanded);
+      });
+      btn.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          btn.click();
+        }
+      });
+    });
+  </script>
 </body>
 </html> 
