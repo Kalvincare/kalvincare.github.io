@@ -1,12 +1,15 @@
 :root {
   --primary: #43b97f;
   --accent: #f7f6f2;
-  --bg: #fff;
+  --bg: #fffbe9;
   --text: #222;
   --cta: #ffb86b;
   --cta-hover: #ffa940;
-  --card: #f7f6f2;
-  --shadow: 0 4px 24px rgba(67,185,127,0.06);
+  --card: #fff6e0;
+  --shadow: 0 4px 24px rgba(67,185,127,0.10);
+  --jolly-pink: #ffb6c1;
+  --jolly-blue: #aee9ff;
+  --jolly-yellow: #fff6a0;
 }
 * { box-sizing: border-box; }
 html {
@@ -15,32 +18,37 @@ html {
 body {
   margin: 0;
   font-family: 'Montserrat', Arial, sans-serif;
-  background: var(--bg);
+  background: linear-gradient(135deg, var(--bg) 60%, var(--jolly-blue) 100%);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 header, section, footer {
   max-width: 1100px;
   margin: auto;
-  padding: 2.5rem 1rem;
+  padding: 3.5rem 1rem 2.5rem 1rem;
 }
 .hero {
-  background: linear-gradient(120deg, #fff 60%, var(--accent) 100%);
-  border-radius: 0 0 2.5rem 2.5rem;
+  background: linear-gradient(120deg, var(--jolly-yellow) 60%, var(--jolly-pink) 100%);
+  border-radius: 0 0 3rem 3rem;
   text-align: center;
-  padding-top: 4rem;
+  padding-top: 7rem;
+  padding-bottom: 5rem;
   position: relative;
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
 .hero img {
-  width: 420px;
-  max-width: 98vw;
-  border-radius: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 8px 32px rgba(67,185,127,0.08);
+  width: 90vw;
+  max-width: 700px;
+  height: 340px;
   object-fit: cover;
-  height: auto;
+  border-radius: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 32px rgba(67,185,127,0.12);
   background: #eee;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .badge {
   display: inline-block;
@@ -55,47 +63,65 @@ header, section, footer {
   box-shadow: 0 2px 8px rgba(67,185,127,0.03);
 }
 h1 {
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   margin: 0.5rem 0 1.2rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: -0.02em;
+  color: var(--primary);
+  text-shadow: 0 2px 8px #fff6a0;
 }
 .hero p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin-bottom: 2.5rem;
   color: #444;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  background: rgba(255,255,255,0.7);
+  border-radius: 1.5rem;
+  padding: 1rem 1.5rem;
 }
 .cta {
   display: inline-block;
   background: var(--cta);
   color: #fff;
-  font-weight: 700;
-  padding: 1.2rem 2.5rem;
+  font-weight: 800;
+  padding: 1.3rem 2.7rem;
   border-radius: 2.5rem;
   text-decoration: none;
   margin: 0.5rem 0.5rem 0 0;
-  transition: background 0.2s, box-shadow 0.2s;
-  font-size: 1.2rem;
-  box-shadow: 0 2px 8px rgba(255,184,107,0.08);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 16px rgba(255,184,107,0.15);
   border: none;
+  letter-spacing: 0.01em;
+  position: relative;
 }
-.cta:focus, .cta:hover { background: var(--cta-hover); outline: none; box-shadow: 0 4px 16px rgba(255,184,107,0.12); }
+.cta:focus, .cta:hover {
+  background: var(--cta-hover);
+  outline: none;
+  box-shadow: 0 8px 32px rgba(255,184,107,0.18);
+  transform: translateY(-2px) scale(1.04);
+}
+.cta::after {
+  content: ' 🐾';
+  font-size: 1.2em;
+  vertical-align: middle;
+}
 .secondary-link {
   display: inline-block;
   color: var(--primary);
   text-decoration: underline;
   margin-left: 1rem;
-  font-weight: 500;
-  font-size: 1.05rem;
-  padding: 0.8rem 0.6rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 1rem 0.7rem;
   border-radius: 1.5rem;
   transition: background 0.2s;
+  background: rgba(255,255,255,0.5);
 }
 .secondary-link:focus, .secondary-link:hover {
-  background: var(--accent);
+  background: var(--jolly-blue);
 }
 h2 {
   font-size: 2.2rem;
