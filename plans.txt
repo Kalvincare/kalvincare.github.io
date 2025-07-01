@@ -1,0 +1,151 @@
+Here is a detailed web design prompt you can use for a designer, developer, or AI tool to generate the “View All Plans” webpage for Kalvincare. This prompt includes style, structure, copy intent, brand tone, and responsiveness — ensuring a fully fleshed-out creative brief.
+
+🧾 Prompt: Design a Webpage for “View All Plans” – Kalvincare
+🎯 Objective
+Design a visually appealing, conversion-optimized webpage for Kalvincare that showcases its subscription plans for pet nutrition and supplements. The goal is to help users compare options, understand benefits, and take action (subscribe or start a trial).
+
+👥 Target Audience
+Urban pet parents (dog/cat owners)
+
+Aged 28–50, primarily based in Bangalore
+
+Health-conscious, tech-savvy, working professionals
+
+Value science-backed, fresh, and convenient solutions for pet care
+
+🎨 Visual Style & Brand Feel
+Look & Feel: Friendly, modern, clean, and slightly playful (without being childish)
+
+Color Palette:
+
+Primary: Botanical Green (#497a38 or similar)
+
+Accent: Warm Beige, Soft Gray, Fresh White
+
+CTA: Fresh Orange or Herbal Teal for contrast
+
+Typography:
+
+Headings: Poppins, Inter, or Nunito (bold but rounded)
+
+Body: Open Sans, Lato, or Roboto (clean and easy to read)
+
+Icons & Imagery:
+
+Line-style icons for plan features
+
+Real photos of pets (not overly staged) enjoying fresh food or playing
+
+Subtle illustrations of food bowls, supplements, delivery boxes
+
+🧱 Page Structure
+1. Hero Section
+Headline: “Choose the Perfect Plan for Your Pet”
+
+Subheading: “Tailored meals, longevity supplements, and expert care — delivered fresh, monthly.”
+
+Visuals:
+
+Left: Photo of a dog or cat enjoying Kalvincare food
+
+Right: Plan selection cards or a clean CTA block
+
+CTA Buttons:
+
+“Start 3-Day Trial – ₹199”
+
+“Compare All Plans”
+
+2. Plan Comparison Section (Core)
+Design a 3-column responsive comparison table with the following plans:
+
+💳 Plan Cards (With Hover Effects)
+Feature	Starter ₹999/mo	Premium ₹1,499/mo	Family ₹2,499/mo
+Ideal for	Small breed / new users	Most pets (active/lifestyle)	Multi-pet / large breeds
+Fresh, Customized Meals	✅	✅	✅
+Longevity Supplements	❌	✅	✅
+Personalized Nutrition Quiz	✅	✅	✅
+Delivery Frequency	Monthly (standard)	Bi-weekly (priority)	Bi-weekly (priority)
+Access to Vet & Nutritionist	❌	✅	✅
+Cancel Anytime	✅	✅	✅
+Free Delivery in Bangalore	✅	✅	✅
+Select Button	“Select Plan”	“Select Plan” (highlighted)	“Select Plan”
+
+Add a “Most Popular” ribbon to Premium
+
+Cards should have smooth transitions and hover states
+
+Mobile: Stack plans vertically with toggle view
+
+3. Trial Promo Banner
+Text: “Not sure which plan suits your pet? Try our 3-day Fresh Meal Plan for just ₹199.”
+
+CTA Button: “Start Trial Now”
+
+Visual: Paw or meal illustration background
+
+4. How It Works (3 Steps)
+Headline: “How Kalvincare Works”
+
+Use numbered icons or illustrations:
+
+Tell Us About Your Pet (Take a 2-min quiz)
+
+Get Your Plan & Delivery (Meals and supplements at your doorstep)
+
+See the Difference (Track pet health and behavior improvement)
+
+5. Customer Testimonials
+Layout: Rotating carousel or 3 cards in grid format
+
+Content:
+
+Customer quote (1–2 lines)
+
+Pet photo
+
+Name + Pet name + Breed (e.g., “Ankita & Bruno, Labrador”)
+
+Highlight key benefits mentioned (e.g., coat health, energy)
+
+6. FAQ Section
+Design collapsible/accordion-style dropdowns for clarity.
+
+Sample FAQs:
+
+Can I cancel or change my plan anytime?
+
+Are the supplements vet-approved?
+
+Do you deliver outside Bangalore?
+
+What’s in the meals?
+
+7. Final CTA Footer
+Headline: “Let’s build a healthier life for your pet.”
+
+Buttons:
+
+“Choose a Plan”
+
+“Try 3-Day Trial – ₹199”
+
+Keep sticky CTA button visible on mobile view
+
+💻 Technical Requirements
+Fully responsive (mobile-first design)
+
+Fast-loading images and compressed assets
+
+SEO-optimized headings (H1, H2, etc.)
+
+Clean, readable layout with strong visual hierarchy
+
+🧩 Optional Add-ons (Stretch Features)
+Toggle for Dog / Cat plans at the top
+
+Micro-interactions (e.g., subtle animations on plan selection)
+
+Display of nutrition highlights (e.g., Omega 3, turmeric, joint support) with icons
+
+
