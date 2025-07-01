@@ -154,6 +154,8 @@ nav.navbar {
   align-items: center;
   gap: 1rem;
   width: 100%;
+  position: relative;
+  z-index: 10;
 }
 @media (min-width: 600px) {
   .hero-buttons { flex-direction: row; justify-content: flex-start; gap: 2rem; }
