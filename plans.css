@@ -1,23 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
 :root {
-  --primary: #0071e3;
-  --cta: #0071e3;
-  --cta-hover: #005bb5;
+  --primary: #43b97f;
+  --cta: #43b97f;
+  --cta-hover: #369e6b;
   --card: #fff;
   --bg: #f8f9fa;
   --border: #e5e7eb;
   --badge: #eaf4fb;
-  --badge-text: #0071e3;
-  --shadow: 0 4px 24px rgba(0,0,0,0.06);
+  --badge-text: #43b97f;
+  --shadow: 0 4px 24px rgba(67,185,127,0.07);
 }
 html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
   background: var(--bg);
   color: #222;
 }
-h1, h2, h3, .plan-card strong { font-family: 'Poppins', 'Montserrat', Arial, sans-serif; }
+h1, h2, h3, .plan-card strong, .badge, .footer-cta, .navbar, .navbar-links a, .cta, .secondary-link, .footer, .footer-links, .footer-contact, .footer-brand, .footer-copy {
+  font-family: 'Montserrat', Arial, sans-serif !important;
+}
 a, button {
   transition: box-shadow 0.2s, background 0.2s, color 0.2s;
   outline: none;
@@ -90,7 +93,7 @@ a:focus, button:focus {
   background: var(--card);
   border-radius: 1.5rem;
   box-shadow: var(--shadow);
-  border: 1.5px solid var(--border);
+  border: 1.5px solid var(--primary);
   padding: 2.5rem 1.5rem 2.5rem 1.5rem;
   min-width: 240px;
   max-width: 340px;
@@ -111,14 +114,14 @@ a:focus, button:focus {
   left: 50%;
   transform: translateX(-50%);
   background: var(--badge);
-  color: var(--badge-text);
+  color: var(--primary);
   font-weight: 700;
   font-size: 1.05rem;
   padding: 0.45rem 1.4rem;
   border-radius: 2rem;
   box-shadow: 0 2px 8px rgba(0,113,227,0.07);
   letter-spacing: 0.01em;
-  border: 1.5px solid var(--border);
+  border: 1.5px solid var(--primary);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -156,13 +159,13 @@ a:focus, button:focus {
   color: #fff;
   border-radius: 2rem;
   font-weight: 700;
-  box-shadow: 0 2px 8px rgba(0,113,227,0.08);
+  box-shadow: 0 2px 8px rgba(67,185,127,0.10);
   border: none;
   transition: background 0.2s, box-shadow 0.2s;
 }
 .plan-card .cta:hover, .plan-card .cta:focus {
   background: var(--cta-hover);
-  box-shadow: 0 4px 16px rgba(0,113,227,0.12);
+  box-shadow: 0 4px 16px rgba(67,185,127,0.14);
 }
 .plan-card .most-popular {
   background: var(--primary, #43b97f);
@@ -303,6 +306,73 @@ a:focus, button:focus {
 }
 .sticky-cta {
   display: none;
+}
+.navbar {
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 2px 12px rgba(67,185,127,0.08);
+  border-bottom: 1.5px solid var(--border);
+}
+.navbar-links a {
+  color: #222;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.navbar-links a:hover, .navbar-links a:focus {
+  background: var(--badge);
+  color: var(--primary);
+}
+.cta {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 2rem;
+  box-shadow: 0 2px 8px rgba(67,185,127,0.10);
+  border: none;
+  letter-spacing: 0.01em;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.cta:focus, .cta:hover {
+  background: var(--cta-hover);
+  box-shadow: 0 4px 16px rgba(67,185,127,0.14);
+}
+.secondary-link {
+  color: var(--primary);
+  background: var(--badge);
+  font-weight: 600;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.secondary-link:focus, .secondary-link:hover {
+  background: #d6f5e6;
+  color: var(--primary);
+}
+.badge {
+  background: var(--badge);
+  color: var(--primary);
+  font-weight: 700;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.hero h1 {
+  color: var(--primary);
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.hero p {
+  color: #222;
+  background: rgba(255,255,255,0.85);
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.footer {
+  background: linear-gradient(120deg, #43b97f 0%, #369e6b 100%);
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  border-top: 2.5px solid #43b97f;
+}
+.footer-links a {
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.footer-links a:hover, .footer-links a:focus {
+  color: #eaf4fb;
+  background: rgba(67,185,127,0.07);
 }
 @media (max-width: 900px) {
   .container { padding: 0; }
