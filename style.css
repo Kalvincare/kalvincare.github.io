@@ -87,16 +87,10 @@ nav.navbar {
   z-index: 1;
   overflow: hidden;
   border-radius: 0 0 3rem 3rem;
-}
-.hero-bg-media, .hero-bg-media-fallback {
-  width: 100vw;
-  height: 100vh;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  background: #fff;
+  background: url('images/hero.gif') center center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .hero-overlay {
   position: absolute;
@@ -663,10 +657,6 @@ nav.navbar {
   .footer-social { gap: 0.7rem; }
   .footer-social img { width: 28px; }
   .plan-table, .why-grid, .steps, .testimonials-grid, .founder-grid { gap: 0.7rem; }
-  .hero-bg-media, .hero-bg-media-fallback {
-    min-height: 320px;
-    object-fit: cover;
-  }
 }
 @media (min-width: 1200px) {
   .hero-content { padding: 3.5rem 2.5rem; }
