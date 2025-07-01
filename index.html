@@ -14,8 +14,12 @@
       --text: #222;
       --cta: #ffb300;
       --cta-hover: #ffa000;
+      --footer-bg: #245624;
     }
     * { box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: 'Montserrat', Arial, sans-serif;
@@ -34,13 +38,16 @@
       text-align: center;
       padding-top: 3rem;
       position: relative;
+      box-shadow: 0 2px 16px rgba(46,125,50,0.04);
     }
     .hero img {
       width: 320px;
-      max-width: 90vw;
+      max-width: 95vw;
       border-radius: 1.5rem;
       margin-bottom: 1.5rem;
       box-shadow: 0 4px 24px rgba(46,125,50,0.08);
+      object-fit: cover;
+      height: auto;
     }
     .badge {
       display: inline-block;
@@ -51,14 +58,15 @@
       font-size: 0.95rem;
       margin-bottom: 1rem;
       font-weight: 700;
+      letter-spacing: 0.02em;
     }
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       margin: 0.5rem 0 1rem;
       font-weight: 700;
     }
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       margin-bottom: 2rem;
     }
     .cta {
@@ -71,21 +79,31 @@
       text-decoration: none;
       margin: 0.5rem 0.5rem 0 0;
       transition: background 0.2s;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 8px rgba(255,179,0,0.08);
     }
-    .cta:hover { background: var(--cta-hover); }
+    .cta:focus, .cta:hover { background: var(--cta-hover); outline: 2px solid var(--primary); }
     .secondary-link {
       display: inline-block;
       color: var(--primary);
       text-decoration: underline;
       margin-left: 1rem;
       font-weight: 500;
+      font-size: 1rem;
+      padding: 0.7rem 0.5rem;
+      border-radius: 1rem;
+      transition: background 0.2s;
     }
-    /* Section headers */
+    .secondary-link:focus, .secondary-link:hover {
+      background: var(--accent);
+      outline: 2px solid var(--primary);
+    }
     h2 {
       font-size: 2rem;
       margin-top: 0;
       color: var(--primary);
       font-weight: 700;
+      letter-spacing: 0.01em;
     }
     /* Why Kalvin Care */
     .why-grid {
@@ -102,10 +120,16 @@
       box-shadow: 0 2px 12px rgba(46,125,50,0.06);
       min-width: 220px;
       text-align: center;
+      transition: box-shadow 0.2s;
+    }
+    .why-card:focus-within, .why-card:hover {
+      box-shadow: 0 4px 24px rgba(46,125,50,0.12);
     }
     .why-card img {
       width: 56px;
       margin-bottom: 1rem;
+      height: 56px;
+      object-fit: contain;
     }
     /* How It Works */
     .steps {
@@ -123,10 +147,16 @@
       text-align: center;
       min-width: 200px;
       box-shadow: 0 2px 12px rgba(46,125,50,0.06);
+      transition: box-shadow 0.2s;
+    }
+    .step:focus-within, .step:hover {
+      box-shadow: 0 4px 24px rgba(46,125,50,0.12);
     }
     .step img {
       width: 48px;
       margin-bottom: 1rem;
+      height: 48px;
+      object-fit: contain;
     }
     /* Pricing */
     .pricing-table {
@@ -145,6 +175,10 @@
       min-width: 200px;
       box-shadow: 0 2px 12px rgba(46,125,50,0.06);
       position: relative;
+      transition: box-shadow 0.2s;
+    }
+    .plan:focus-within, .plan:hover {
+      box-shadow: 0 4px 24px rgba(46,125,50,0.12);
     }
     .plan .ribbon {
       position: absolute;
@@ -161,9 +195,8 @@
     .plan img {
       width: 48px;
       margin-bottom: 1rem;
-    }
-    .plan:hover {
-      box-shadow: 0 4px 24px rgba(46,125,50,0.12);
+      height: 48px;
+      object-fit: contain;
     }
     /* Testimonials */
     .testimonials {
@@ -181,11 +214,17 @@
       min-width: 220px;
       box-shadow: 0 2px 12px rgba(46,125,50,0.06);
       text-align: center;
+      transition: box-shadow 0.2s;
+    }
+    .testimonial:focus-within, .testimonial:hover {
+      box-shadow: 0 4px 24px rgba(46,125,50,0.12);
     }
     .testimonial img {
       width: 48px;
       border-radius: 50%;
       margin-bottom: 1rem;
+      height: 48px;
+      object-fit: cover;
     }
     /* Founder */
     .founder {
@@ -207,13 +246,20 @@
       font-size: 2rem;
       color: #888;
       margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    .founder-img img {
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+      object-fit: cover;
     }
     .founder-content {
       flex: 1 1 300px;
     }
     /* Footer */
     footer {
-      background: var(--primary);
+      background: var(--footer-bg);
       color: #fff;
       border-radius: 2rem 2rem 0 0;
       text-align: center;
@@ -228,6 +274,15 @@
       margin: 0 0.7rem;
       text-decoration: underline;
       font-weight: 500;
+      font-size: 1rem;
+      padding: 0.5rem 0.3rem;
+      border-radius: 0.5rem;
+      transition: background 0.2s;
+    }
+    .footer-links a:focus, .footer-links a:hover {
+      background: var(--accent);
+      color: var(--primary);
+      outline: 2px solid #fff;
     }
     .footer-social {
       margin: 1rem 0;
@@ -236,6 +291,11 @@
       width: 28px;
       margin: 0 0.5rem;
       vertical-align: middle;
+      border-radius: 50%;
+      transition: box-shadow 0.2s;
+    }
+    .footer-social img:focus, .footer-social img:hover {
+      box-shadow: 0 2px 8px #fff;
     }
     @media (max-width: 900px) {
       .why-grid, .steps, .pricing-table, .testimonials, .founder {
@@ -246,145 +306,186 @@
         margin: auto;
       }
     }
+    @media (max-width: 600px) {
+      header, section, footer {
+        padding: 1.2rem 0.3rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      .hero img {
+        width: 98vw;
+        max-width: 98vw;
+      }
+      .badge {
+        font-size: 0.8rem;
+      }
+      .cta, .secondary-link {
+        font-size: 0.95rem;
+        padding: 0.7rem 1.2rem;
+      }
+      .why-card, .step, .plan, .testimonial {
+        padding: 1rem;
+        min-width: 0;
+      }
+      .founder-img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    @media (max-width: 400px) {
+      .hero img {
+        width: 90vw;
+      }
+      .cta, .secondary-link {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.7rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="badge">Made in Bangalore • NCBS-Backed</div>
-    <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80" alt="Happy dog and cat with Kalvin Care bowls">
+  <header class="hero" aria-label="KalvinCare Hero Section">
+    <div class="badge" aria-label="Made in Bangalore, NCBS-Backed">Made in Bangalore • NCBS-Backed</div>
+    <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80" alt="Happy dog and cat eating from Kalvin Care bowls, Bangalore skyline in background" loading="lazy">
     <h1>Fresh Food, Longer Lives—Nutrition Your Pet Deserves</h1>
     <p>Give your pet the gift of health and happiness with Kalvin Care. Fresh, human-grade meals and longevity supplements—crafted in Bangalore by an NCBS biologist. See shinier coats, more energy, and years added to their life. Start today!</p>
-    <a href="#plans" class="cta">Get Started – Plans from ₹999/month</a>
-    <a href="#trial" class="secondary-link">Try a 3-Day Pack for ₹199</a>
+    <a href="#plans" class="cta" aria-label="Get Started with Plans from ₹999/month">Get Started – Plans from ₹999/month</a>
+    <a href="#trial" class="secondary-link" aria-label="Try a 3-Day Pack for ₹199">Try a 3-Day Pack for ₹199</a>
   </header>
 
-  <section id="why">
-    <h2>Why Pet Parents Choose Kalvin Care</h2>
-    <div class="why-grid">
-      <div class="why-card">
-        <img src="https://img.icons8.com/color/96/000000/ingredients.png" alt="Fresh Ingredients">
-        <strong>Fresh, Not Processed</strong>
-        <p>No preservatives or fillers—just lean meats, organic veggies, and superfoods, sourced locally in Bangalore.</p>
+  <main>
+    <section id="why" aria-labelledby="why-header">
+      <h2 id="why-header">Why Pet Parents Choose Kalvin Care</h2>
+      <div class="why-grid">
+        <div class="why-card" tabindex="0">
+          <img src="https://img.icons8.com/color/96/000000/ingredients.png" alt="Fresh Ingredients: Lean meats, organic veggies, superfoods" loading="lazy">
+          <strong>Fresh, Not Processed</strong>
+          <p>No preservatives or fillers—just lean meats, organic veggies, and superfoods, sourced locally in Bangalore.</p>
+        </div>
+        <div class="why-card" tabindex="0">
+          <img src="https://img.icons8.com/color/96/000000/microscope.png" alt="Science-Backed: Lab and research" loading="lazy">
+          <strong>Science-Backed Longevity</strong>
+          <p>Formulated by Abhishek Anand (NCBS), with probiotics and omega-3s to boost immunity and lifespan.</p>
+        </div>
+        <div class="why-card" tabindex="0">
+          <img src="https://img.icons8.com/color/96/000000/settings.png" alt="Customization: Dropdown menu" loading="lazy">
+          <strong>Customized for Your Pet</strong>
+          <p>Tailored recipes for every breed, age, and need—because every pet is unique.</p>
+        </div>
+        <div class="why-card" tabindex="0">
+          <img src="https://img.icons8.com/color/96/000000/dog.png" alt="Visible Results: Before/after pet photo" loading="lazy">
+          <strong>Visible Results</strong>
+          <p>Our Bangalore pilot showed happier, healthier pets in just 30 days.</p>
+        </div>
       </div>
-      <div class="why-card">
-        <img src="https://img.icons8.com/color/96/000000/microscope.png" alt="Science-Backed">
-        <strong>Science-Backed Longevity</strong>
-        <p>Formulated by Abhishek Anand (NCBS), with probiotics and omega-3s to boost immunity and lifespan.</p>
-      </div>
-      <div class="why-card">
-        <img src="https://img.icons8.com/color/96/000000/settings.png" alt="Customization">
-        <strong>Customized for Your Pet</strong>
-        <p>Tailored recipes for every breed, age, and need—because every pet is unique.</p>
-      </div>
-      <div class="why-card">
-        <img src="https://img.icons8.com/color/96/000000/dog.png" alt="Visible Results">
-        <strong>Visible Results</strong>
-        <p>Our Bangalore pilot showed happier, healthier pets in just 30 days.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="how">
-    <h2>Healthier Pets in 3 Easy Steps</h2>
-    <div class="steps">
-      <div class="step">
-        <img src="https://img.icons8.com/color/96/000000/quiz.png" alt="Quiz">
-        <strong>Tell Us About Your Pet</strong>
-        <p>Take our 1-minute quiz—share their breed, age, and needs.</p>
+    <section id="how" aria-labelledby="how-header">
+      <h2 id="how-header">Healthier Pets in 3 Easy Steps</h2>
+      <div class="steps">
+        <div class="step" tabindex="0">
+          <img src="https://img.icons8.com/color/96/000000/quiz.png" alt="Step 1: Pet parent filling out quiz on a phone" loading="lazy">
+          <strong>Tell Us About Your Pet</strong>
+          <p>Take our 1-minute quiz—share their breed, age, and needs.</p>
+        </div>
+        <div class="step" tabindex="0">
+          <img src="https://img.icons8.com/color/96/000000/chef-hat.png" alt="Step 2: Kitchen scene with chefs packing Kalvin Care meals" loading="lazy">
+          <strong>We Craft Their Meal</strong>
+          <p>Our team designs a fresh, tailored plan, delivered to your door.</p>
+        </div>
+        <div class="step" tabindex="0">
+          <img src="https://img.icons8.com/color/96/000000/dog-bowl.png" alt="Step 3: A wagging dog/cat enjoying their food" loading="lazy">
+          <strong>See the Difference</strong>
+          <p>Watch your pet thrive with every bowl—starting in just days!</p>
+        </div>
       </div>
-      <div class="step">
-        <img src="https://img.icons8.com/color/96/000000/chef-hat.png" alt="Meal Prep">
-        <strong>We Craft Their Meal</strong>
-        <p>Our team designs a fresh, tailored plan, delivered to your door.</p>
-      </div>
-      <div class="step">
-        <img src="https://img.icons8.com/color/96/000000/dog-bowl.png" alt="Happy Pet">
-        <strong>See the Difference</strong>
-        <p>Watch your pet thrive with every bowl—starting in just days!</p>
-      </div>
-    </div>
-    <a href="#plans" class="cta">Build Your Pet's Plan</a>
-  </section>
+      <a href="#plans" class="cta" aria-label="Build Your Pet's Plan">Build Your Pet's Plan</a>
+    </section>
 
-  <section id="plans">
-    <h2>Plans for Every Pet, Delivered Fresh</h2>
-    <div class="pricing-table">
-      <div class="plan">
-        <img src="https://img.icons8.com/color/96/000000/dog-bowl.png" alt="Starter Plan">
-        <strong>Starter Plan</strong>
-        <p>₹999/month – Fresh basics for small breeds.</p>
+    <section id="plans" aria-labelledby="plans-header">
+      <h2 id="plans-header">Plans for Every Pet, Delivered Fresh</h2>
+      <div class="pricing-table">
+        <div class="plan" tabindex="0">
+          <img src="https://img.icons8.com/color/96/000000/dog-bowl.png" alt="Starter Plan: Small dog silhouette + bowl" loading="lazy">
+          <strong>Starter Plan</strong>
+          <p>₹999/month – Fresh basics for small breeds.</p>
+        </div>
+        <div class="plan" tabindex="0">
+          <img src="https://img.icons8.com/color/96/000000/dog-bowl.png" alt="Premium Plan: Medium dog + supplement bottle" loading="lazy">
+          <strong>Premium Plan</strong>
+          <p>₹1,499/month – Customized meals + longevity supplements.</p>
+        </div>
+        <div class="plan" tabindex="0">
+          <img src="https://img.icons8.com/color/96/000000/dog-bowl.png" alt="Family Plan: Two pets + larger bowl" loading="lazy">
+          <strong>Family Plan</strong>
+          <p>₹2,499/month – Multi-pet or large breed option.</p>
+        </div>
+        <div class="plan" id="trial" tabindex="0">
+          <span class="ribbon">Try Me</span>
+          <img src="https://img.icons8.com/color/96/000000/dog-bowl.png" alt="Trial Pack: Mini pack with a Try Me ribbon" loading="lazy">
+          <strong>Trial Pack</strong>
+          <p>₹199 – Try 3 days, see the magic!</p>
+        </div>
       </div>
-      <div class="plan">
-        <img src="https://img.icons8.com/color/96/000000/dog-bowl.png" alt="Premium Plan">
-        <strong>Premium Plan</strong>
-        <p>₹1,499/month – Customized meals + longevity supplements.</p>
-      </div>
-      <div class="plan">
-        <img src="https://img.icons8.com/color/96/000000/dog-bowl.png" alt="Family Plan">
-        <strong>Family Plan</strong>
-        <p>₹2,499/month – Multi-pet or large breed option.</p>
-      </div>
-      <div class="plan" id="trial">
-        <span class="ribbon">Try Me</span>
-        <img src="https://img.icons8.com/color/96/000000/dog-bowl.png" alt="Trial Pack">
-        <strong>Trial Pack</strong>
-        <p>₹199 – Try 3 days, see the magic!</p>
-      </div>
-    </div>
-    <p style="margin-top:1.5rem;">Free delivery in Bangalore—cancel anytime.</p>
-    <a href="#plans" class="cta">Choose Your Plan</a>
-    <a href="#trial" class="secondary-link">Not Sure? Start with a Trial</a>
-  </section>
+      <p style="margin-top:1.5rem;">Free delivery in Bangalore—cancel anytime.</p>
+      <a href="#plans" class="cta" aria-label="Choose Your Plan">Choose Your Plan</a>
+      <a href="#trial" class="secondary-link" aria-label="Not Sure? Start with a Trial">Not Sure? Start with a Trial</a>
+    </section>
 
-  <section id="testimonials">
-    <h2>What Bangalore Pet Parents Say</h2>
-    <div class="testimonials">
-      <div class="testimonial">
-        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya, Koramangala">
-        <strong>Priya, Koramangala</strong>
-        <p>"My Labrador's coat is shinier than ever after 2 weeks!"</p>
+    <section id="testimonials" aria-labelledby="testimonials-header">
+      <h2 id="testimonials-header">What Bangalore Pet Parents Say</h2>
+      <div class="testimonials">
+        <div class="testimonial" tabindex="0">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya, Koramangala with Labrador" loading="lazy">
+          <strong>Priya, Koramangala</strong>
+          <p>"My Labrador's coat is shinier than ever after 2 weeks!"</p>
+        </div>
+        <div class="testimonial" tabindex="0">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ravi, Whitefield with tabby cat" loading="lazy">
+          <strong>Ravi, Whitefield</strong>
+          <p>"Finally, food my cat loves—and I trust it's healthy."</p>
+        </div>
+        <div class="testimonial" tabindex="0">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Dr. Kavita, Vet Partner in white coat" loading="lazy">
+          <strong>Dr. Kavita, Vet Partner</strong>
+          <p>"Kalvin Care's science is spot-on—my clients see results."</p>
+        </div>
       </div>
-      <div class="testimonial">
-        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ravi, Whitefield">
-        <strong>Ravi, Whitefield</strong>
-        <p>"Finally, food my cat loves—and I trust it's healthy."</p>
-      </div>
-      <div class="testimonial">
-        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Dr. Kavita, Vet Partner">
-        <strong>Dr. Kavita, Vet Partner</strong>
-        <p>"Kalvin Care's science is spot-on—my clients see results."</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="founder">
-    <h2>Meet Abhishek—Your Pet's Nutrition Expert</h2>
-    <div class="founder">
-      <div class="founder-img">
-        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Abhishek Anand" style="width:100%;height:100%;border-radius:1rem;object-fit:cover;">
+    <section id="founder" aria-labelledby="founder-header">
+      <h2 id="founder-header">Meet Abhishek—Your Pet's Nutrition Expert</h2>
+      <div class="founder">
+        <div class="founder-img">
+          <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Abhishek Anand, NCBS biologist, with pet and Kalvin Care pack" loading="lazy">
+        </div>
+        <div class="founder-content">
+          <p>Hi, I'm <strong>Abhishek Anand</strong>, a biologist from NCBS Bangalore. After years researching animal health and founding Wochman—a global livestock startup—I created Kalvin Care to bring fresh, science-backed nutrition to India's pets. Let's give them the long, happy lives they deserve!</p>
+          <a href="#about" class="secondary-link" aria-label="Learn Our Story">Learn Our Story</a>
+          <div style="margin-top:1rem;"><span class="badge">Featured in YourStory</span></div>
+        </div>
       </div>
-      <div class="founder-content">
-        <p>Hi, I'm <strong>Abhishek Anand</strong>, a biologist from NCBS Bangalore. After years researching animal health and founding Wochman—a global livestock startup—I created Kalvin Care to bring fresh, science-backed nutrition to India's pets. Let's give them the long, happy lives they deserve!</p>
-        <a href="#about" class="secondary-link">Learn Our Story</a>
-        <div style="margin-top:1rem;"><span class="badge">Featured in YourStory</span></div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <footer>
+  <footer aria-label="KalvinCare Footer">
     <div>Made in Bangalore | NCBS-Backed | 100% Fresh Guarantee</div>
-    <div class="footer-links">
-      <a href="#">Home</a> |
-      <a href="#plans">Plans</a> |
-      <a href="#founder">About</a> |
-      <a href="#faq">FAQ</a> |
-      <a href="mailto:support@kalvincare.com">Contact</a>
-    </div>
+    <nav class="footer-links" aria-label="Footer Navigation">
+      <a href="#" aria-label="Home">Home</a> |
+      <a href="#plans" aria-label="Plans">Plans</a> |
+      <a href="#founder" aria-label="About">About</a> |
+      <a href="#faq" aria-label="FAQ">FAQ</a> |
+      <a href="mailto:support@kalvincare.com" aria-label="Contact">Contact</a>
+    </nav>
     <div>support@kalvincare.com | +91-XXXX-XXXX</div>
     <div class="footer-social">
-      <a href="#"><img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram"></a>
-      <a href="#"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook"></a>
-      <a href="#"><img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp"></a>
+      <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram"></a>
+      <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook"></a>
+      <a href="#" aria-label="WhatsApp"><img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp"></a>
     </div>
     <div style="margin-top:1rem;font-weight:700;">Join the Pet Wellness Revolution—Start Today!</div>
     <div style="margin-top:1rem;font-size:0.9rem;">&copy; 2024 KalvinCare Biosciences</div>
