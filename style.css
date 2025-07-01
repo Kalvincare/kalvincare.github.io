@@ -87,7 +87,7 @@ nav.navbar {
   z-index: 1;
   overflow: hidden;
   border-radius: 0 0 3rem 3rem;
-  background: url('images/hero.gif') center center/cover no-repeat;
+  background: url('images/hero_static.jpg') center center/cover no-repeat;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
