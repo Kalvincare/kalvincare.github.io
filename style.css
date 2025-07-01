@@ -1,12 +1,12 @@
 :root {
-  --primary: #0071e3;
-  --accent: #f5f5f7;
+  --primary: #43b97f;
+  --accent: #f7f6f2;
   --bg: #fff;
-  --text: #111;
-  --cta: #0071e3;
-  --cta-hover: #005bb5;
-  --card: #f5f5f7;
-  --shadow: 0 4px 24px rgba(0,0,0,0.06);
+  --text: #222;
+  --cta: #ffb86b;
+  --cta-hover: #ffa940;
+  --card: #f7f6f2;
+  --shadow: 0 4px 24px rgba(67,185,127,0.06);
 }
 * { box-sizing: border-box; }
 html {
@@ -37,7 +37,7 @@ header, section, footer {
   max-width: 98vw;
   border-radius: 2rem;
   margin-bottom: 2rem;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 32px rgba(67,185,127,0.08);
   object-fit: cover;
   height: auto;
   background: #eee;
@@ -52,7 +52,7 @@ header, section, footer {
   margin-bottom: 1.2rem;
   font-weight: 600;
   letter-spacing: 0.04em;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 8px rgba(67,185,127,0.03);
 }
 h1 {
   font-size: 2.8rem;
@@ -79,10 +79,10 @@ h1 {
   margin: 0.5rem 0.5rem 0 0;
   transition: background 0.2s, box-shadow 0.2s;
   font-size: 1.2rem;
-  box-shadow: 0 2px 8px rgba(0,113,227,0.08);
+  box-shadow: 0 2px 8px rgba(255,184,107,0.08);
   border: none;
 }
-.cta:focus, .cta:hover { background: var(--cta-hover); outline: none; box-shadow: 0 4px 16px rgba(0,113,227,0.12); }
+.cta:focus, .cta:hover { background: var(--cta-hover); outline: none; box-shadow: 0 4px 16px rgba(255,184,107,0.12); }
 .secondary-link {
   display: inline-block;
   color: var(--primary);
@@ -124,7 +124,7 @@ h2 {
   max-width: 260px;
 }
 .why-card:focus-within, .why-card:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  box-shadow: 0 8px 32px rgba(67,185,127,0.10);
   transform: translateY(-4px) scale(1.03);
 }
 .why-card img {
@@ -157,7 +157,7 @@ h2 {
   max-width: 260px;
 }
 .step:focus-within, .step:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  box-shadow: 0 8px 32px rgba(67,185,127,0.10);
   transform: translateY(-4px) scale(1.03);
 }
 .step img {
@@ -186,7 +186,7 @@ h2 {
   max-width: 260px;
 }
 .plan:focus-within, .plan:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  box-shadow: 0 8px 32px rgba(67,185,127,0.10);
   transform: translateY(-4px) scale(1.03);
 }
 .plan .ribbon {
@@ -231,7 +231,7 @@ h2 {
   max-width: 260px;
 }
 .testimonial:focus-within, .testimonial:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  box-shadow: 0 8px 32px rgba(67,185,127,0.10);
   transform: translateY(-4px) scale(1.03);
 }
 .testimonial img {
@@ -274,7 +274,7 @@ h2 {
   text-align: left;
 }
 footer {
-  background: #111;
+  background: #222;
   color: #fff;
   border-radius: 2rem 2rem 0 0;
   text-align: center;
