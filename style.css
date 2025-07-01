@@ -536,4 +536,50 @@ footer {
     font-size: 0.9rem;
     padding: 0.6rem 0.8rem;
   }
+}
+.hero-video-bg {
+  background: #fff;
+  border-radius: 2.5rem;
+  box-shadow: 0 8px 32px rgba(46,196,182,0.10);
+  padding: 0.5rem;
+  max-width: 700px;
+  margin: 0 0 2.5rem 0;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-bg-media {
+  border-radius: 2rem;
+  width: 100%;
+  height: auto;
+  max-width: 680px;
+  max-height: 340px;
+  object-fit: contain;
+  background: #fff;
+}
+@media (max-width: 900px) {
+  .hero-video-bg {
+    max-width: 98vw;
+    border-radius: 1.5rem;
+    padding: 0.2rem;
+  }
+  .hero-bg-media {
+    border-radius: 1rem;
+    max-width: 96vw;
+    max-height: 220px;
+  }
+}
+@media (max-width: 600px) {
+  .hero-video-bg {
+    max-width: 100vw;
+    border-radius: 1rem;
+    padding: 0.1rem;
+  }
+  .hero-bg-media {
+    border-radius: 0.7rem;
+    max-width: 98vw;
+    max-height: 160px;
+  }
 } 
