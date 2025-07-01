@@ -1,12 +1,22 @@
 :root {
-  --primary: #43b97f;
-  --cta: #ffb86b;
-  --card: #f7f6f2;
+  --primary: #0071e3;
+  --cta: #0071e3;
+  --cta-hover: #005bb5;
+  --card: #fff;
+  --bg: #f8f9fa;
+  --border: #e5e7eb;
+  --badge: #eaf4fb;
+  --badge-text: #0071e3;
+  --shadow: 0 4px 24px rgba(0,0,0,0.06);
 }
 html {
   scroll-behavior: smooth;
 }
-body { font-family: 'Open Sans', Arial, sans-serif; }
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  background: var(--bg);
+  color: #222;
+}
 h1, h2, h3, .plan-card strong { font-family: 'Poppins', 'Montserrat', Arial, sans-serif; }
 a, button {
   transition: box-shadow 0.2s, background 0.2s, color 0.2s;
@@ -19,7 +29,7 @@ a:focus, button:focus {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 .plans-hero {
   display: flex;
@@ -27,10 +37,11 @@ a:focus, button:focus {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  background: linear-gradient(120deg, var(--card) 60%, #fff 100%);
+  background: var(--bg);
   border-radius: 0 0 2.5rem 2.5rem;
-  padding: 3rem 1rem 2rem 1rem;
-  margin-bottom: 2rem;
+  box-shadow: none;
+  padding: 4rem 1.5rem 3rem 1.5rem;
+  margin-bottom: 2.5rem;
   padding-top: 5.5rem;
   padding-bottom: 4rem;
 }
@@ -40,8 +51,8 @@ a:focus, button:focus {
   max-width: 700px;
   border-radius: 2rem;
   object-fit: cover;
-  box-shadow: 0 8px 32px rgba(67,185,127,0.08);
-  background: #eee;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.04);
+  background: #f3f4f6;
   width: 100%;
   height: auto;
   margin-bottom: 2.5rem;
@@ -70,53 +81,62 @@ a:focus, button:focus {
 .plan-table {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 2.5rem;
   justify-content: center;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1100px;
 }
 .plan-card {
-  background: var(--card, #f7f6f2);
+  background: var(--card);
   border-radius: 1.5rem;
-  box-shadow: 0 4px 24px rgba(67,185,127,0.06);
-  padding: 2rem 1.2rem 2.5rem 1.2rem;
+  box-shadow: var(--shadow);
+  border: 1.5px solid var(--border);
+  padding: 2.5rem 1.5rem 2.5rem 1.5rem;
   min-width: 240px;
-  max-width: 320px;
-  flex: 1 1 260px;
+  max-width: 340px;
+  flex: 1 1 300px;
   text-align: center;
   position: relative;
   transition: box-shadow 0.2s, transform 0.2s;
+  margin-top: 2.2rem;
   scroll-snap-align: start;
 }
 .plan-card:hover, .plan-card:focus-within {
-  box-shadow: 0 8px 32px rgba(67,185,127,0.10);
+  box-shadow: 0 8px 32px rgba(0,113,227,0.10);
   transform: translateY(-4px) scale(1.03);
 }
-.plan-card .ribbon {
+.plan-badge {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background: var(--cta, #ffb86b);
-  color: #fff;
-  padding: 0.4rem 1.2rem;
-  border-radius: 1rem;
-  font-size: 1rem;
+  top: -1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--badge);
+  color: var(--badge-text);
   font-weight: 700;
-  z-index: 2;
-  box-shadow: 0 2px 8px rgba(255,184,107,0.08);
+  font-size: 1.05rem;
+  padding: 0.45rem 1.4rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 8px rgba(0,113,227,0.07);
+  letter-spacing: 0.01em;
+  border: 1.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 .plan-card strong {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   display: block;
   margin-bottom: 0.5rem;
-  color: var(--primary, #43b97f);
+  color: #222;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 .plan-card ul {
   list-style: none;
   padding: 0;
   margin: 1.2rem 0 1.5rem 0;
   text-align: left;
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 .plan-card ul li {
   margin-bottom: 0.7rem;
@@ -126,12 +146,23 @@ a:focus, button:focus {
 }
 .plan-card ul li .icon {
   font-size: 1.1rem;
-  color: var(--primary, #43b97f);
+  color: var(--primary);
 }
 .plan-card .cta {
   width: 100%;
-  margin-top: 1rem;
-  font-size: 1.1rem;
+  margin-top: 1.2rem;
+  font-size: 1.12rem;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 2rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0,113,227,0.08);
+  border: none;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.plan-card .cta:hover, .plan-card .cta:focus {
+  background: var(--cta-hover);
+  box-shadow: 0 4px 16px rgba(0,113,227,0.12);
 }
 .plan-card .most-popular {
   background: var(--primary, #43b97f);
@@ -145,19 +176,19 @@ a:focus, button:focus {
   z-index: 2;
 }
 .trial-banner {
-  background: linear-gradient(90deg, var(--card) 60%, #fff 100%);
+  background: #fff;
   border-radius: 1.5rem;
   margin: 2.5rem 0;
-  padding: 2rem 1.2rem;
+  padding: 2.2rem 1.5rem;
+  box-shadow: var(--shadow);
   display: flex;
   align-items: center;
   gap: 1.5rem;
   justify-content: space-between;
-  box-shadow: 0 2px 12px rgba(67,185,127,0.06);
 }
 .trial-banner .trial-visual {
   font-size: 2.5rem;
-  color: var(--primary, #43b97f);
+  color: var(--primary);
   margin-right: 1.2rem;
 }
 .trial-banner .cta {
@@ -175,9 +206,9 @@ a:focus, button:focus {
   margin-top: 2rem;
 }
 .how-step {
-  background: var(--card, #f7f6f2);
+  background: #fff;
   border-radius: 1.2rem;
-  box-shadow: 0 2px 12px rgba(67,185,127,0.06);
+  box-shadow: var(--shadow);
   padding: 1.5rem 1rem;
   min-width: 180px;
   max-width: 220px;
@@ -186,7 +217,7 @@ a:focus, button:focus {
 }
 .how-step .icon {
   font-size: 2.2rem;
-  color: var(--primary, #43b97f);
+  color: var(--primary);
   margin-bottom: 0.7rem;
 }
 .testimonials-grid {
@@ -197,9 +228,9 @@ a:focus, button:focus {
   margin: 2.5rem 0;
 }
 .testimonial-card {
-  background: var(--card, #f7f6f2);
+  background: #fff;
   border-radius: 1.2rem;
-  box-shadow: 0 2px 12px rgba(67,185,127,0.06);
+  box-shadow: var(--shadow);
   padding: 1.5rem 1rem;
   min-width: 220px;
   max-width: 260px;
