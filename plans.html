@@ -8,15 +8,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
+    :root {
+      --primary: #43b97f;
+      --cta: #ffb86b;
+      --card: #f7f6f2;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
     body { font-family: 'Open Sans', Arial, sans-serif; }
     h1, h2, h3, .plan-card strong { font-family: 'Poppins', 'Montserrat', Arial, sans-serif; }
+    a, button {
+      transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+      outline: none;
+    }
+    a:focus, button:focus {
+      box-shadow: 0 0 0 2px var(--primary, #43b97f);
+      background: #e6f9f1;
+    }
     .plans-hero {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       gap: 2rem;
-      background: linear-gradient(120deg, #f7f6f2 60%, #fff 100%);
+      background: linear-gradient(120deg, var(--card) 60%, #fff 100%);
       border-radius: 0 0 2.5rem 2.5rem;
       padding: 3rem 1rem 2rem 1rem;
       margin-bottom: 2rem;
@@ -56,6 +72,9 @@
       flex-wrap: wrap;
       gap: 2rem;
       justify-content: center;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
     }
     .plan-card {
       background: var(--card, #f7f6f2);
@@ -68,6 +87,7 @@
       text-align: center;
       position: relative;
       transition: box-shadow 0.2s, transform 0.2s;
+      scroll-snap-align: start;
     }
     .plan-card:hover, .plan-card:focus-within {
       box-shadow: 0 8px 32px rgba(67,185,127,0.10);
@@ -126,7 +146,7 @@
       z-index: 2;
     }
     .trial-banner {
-      background: linear-gradient(90deg, #f7f6f2 60%, #fff 100%);
+      background: linear-gradient(90deg, var(--card) 60%, #fff 100%);
       border-radius: 1.5rem;
       margin: 2.5rem 0;
       padding: 2rem 1.2rem;
@@ -234,6 +254,10 @@
       outline: none;
       transition: color 0.2s;
     }
+    .faq-question:focus {
+      background: #e6f9f1;
+      color: #222;
+    }
     .faq-answer {
       display: none;
       padding: 0.5rem 0 0.5rem 1rem;
@@ -261,6 +285,7 @@
     }
     @media (max-width: 600px) {
       .plans-hero, .plan-table, .trial-banner, .how-steps, .testimonials-grid { padding: 0; }
+      .plan-table { overflow-x: auto; }
       .plan-card, .testimonial-card, .how-step { min-width: 0; max-width: 100%; }
       .faq-section { padding: 0 0.2rem; }
       .final-cta { margin: 2rem 0 1rem 0; }
@@ -283,12 +308,21 @@
     }
   </style>
   <script>
-    // FAQ accordion
+    // FAQ accordion with ARIA and keyboard support
     document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('.faq-question').forEach(function(btn) {
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-controls', btn.nextElementSibling.id || '');
         btn.addEventListener('click', function() {
           const item = btn.closest('.faq-item');
-          item.classList.toggle('open');
+          const expanded = item.classList.toggle('open');
+          btn.setAttribute('aria-expanded', expanded);
+        });
+        btn.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            btn.click();
+          }
         });
       });
     });
