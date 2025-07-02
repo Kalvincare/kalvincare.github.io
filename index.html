@@ -388,10 +388,13 @@
       document.getElementById('cta-modal').style.display = 'none';
       document.body.style.overflow = '';
     }
-    document.querySelectorAll('.hero-buttons .cta, .hero-buttons .secondary-link').forEach(function(btn) {
+    document.querySelectorAll('.cta, .secondary-link').forEach(function(btn) {
       btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        showCtaModal();
+        // Only trigger for anchor or button elements, and not for the form submit button
+        if ((btn.tagName === 'A' || btn.tagName === 'BUTTON') && !btn.closest('form')) {
+          e.preventDefault();
+          showCtaModal();
+        }
       });
     });
     document.getElementById('close-cta-modal').addEventListener('click', hideCtaModal);
