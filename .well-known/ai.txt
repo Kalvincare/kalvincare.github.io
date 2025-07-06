@@ -1,0 +1,31 @@
+# AI.txt file for KalvinCare
+# This file provides guidance for AI crawlers and language models
+
+# Contact information
+Contact: support@kalvincare.com
+
+# Website description
+Description: KalvinCare is a Bengaluru-based pet food company offering fresh, science-backed pet food and longevity supplements. We provide customized meal plans for dogs and cats, crafted by biologists with human-grade ingredients.
+
+# Business information
+Business: Pet food and supplements
+Location: Bengaluru, Karnataka, India
+Services: Fresh pet food delivery, pet supplements, nutrition consultation
+
+# Content guidelines
+Content-Type: Pet nutrition, health, and wellness
+Language: English
+Target-Audience: Pet owners in Bengaluru
+
+# Permissions
+Allow: All content for educational and informational purposes
+Allow: Product information and pricing
+Allow: Contact information and business details
+
+# Restrictions
+Disallow: Personal customer data
+Disallow: Internal business processes
+Disallow: Financial information
+
+# Last updated
+Last-Updated: 2024-12-19 
