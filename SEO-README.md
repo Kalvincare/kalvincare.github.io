@@ -7,7 +7,7 @@ This document outlines the SEO optimizations implemented for the KalvinCare webs
 
 ### 1. XML Sitemap (`sitemap.xml`)
 - **Purpose**: Helps search engines discover and index all pages
-- **Location**: `https://kalvincare.github.io/sitemap.xml`
+- **Location**: `https://kalvincare.com/sitemap.xml`
 - **Features**:
   - Lists all important pages with priorities
   - Includes last modification dates
@@ -148,7 +148,7 @@ Both `index.html` and `plans.html` now include:
 ## Contact Information
 For SEO-related questions or updates:
 - Email: support@kalvincare.com
-- Website: https://kalvincare.github.io
+- Website: https://kalvincare.com
 
 ## Last Updated
 December 19, 2024 

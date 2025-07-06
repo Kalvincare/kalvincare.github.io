@@ -6,7 +6,7 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://kalvincare.github.io/</loc>
+    <loc>https://kalvincare.com/</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
   
   <!-- Plans Page -->
   <url>
-    <loc>https://kalvincare.github.io/plans.html</loc>
+    <loc>https://kalvincare.com/plans.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -22,7 +22,7 @@
   
   <!-- Thanks Page (if exists) -->
   <url>
-    <loc>https://kalvincare.github.io/thanks.html</loc>
+    <loc>https://kalvincare.com/thanks.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

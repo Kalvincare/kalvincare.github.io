@@ -33,7 +33,7 @@
                 const text = this.textContent.trim();
                 
                 // Track internal link clicks
-                if (href.startsWith('#') || href.includes('kalvincare.github.io')) {
+                if (href.startsWith('#') || href.includes('kalvincare.com')) {
                     if (typeof gtag !== 'undefined') {
                         gtag('event', 'click', {
                             event_category: 'Internal Link',
